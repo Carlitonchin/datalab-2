@@ -14,6 +14,12 @@ def project(id_proyecto):
     
     proyectos = get_projects_like(cur, id_proyecto)
     usuarios = get_users(cur)
-    print(usuarios)
+    
     con.close()
-    return json.dumps(usuarios, ensure_ascii=False)
+
+    result = {
+        "projects": proyectos, 
+        "users":usuarios
+        }
+    
+    return result
