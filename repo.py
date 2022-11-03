@@ -20,7 +20,7 @@ def get_users(cur:Cursor):
     SELECT * FROM
     user LEFT JOIN user_role_association_table
     ON user.id = user_role_association_table.user_id
-    JOIN role
+    LEFT JOIN role
     ON role.id = user_role_association_table.role_id
     ''')
 
