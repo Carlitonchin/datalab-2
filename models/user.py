@@ -18,5 +18,8 @@ def create_user(row):
     except AttributeError:
         pass
 
+    if user["role"]["id"] is None:
+        user["role"] = None
+
     return user
     
