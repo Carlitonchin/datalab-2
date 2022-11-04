@@ -1,0 +1,1 @@
+Ejecutar `flask run`, asegurarse de tener todos los paquetes necesarios instalados
